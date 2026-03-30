@@ -43,15 +43,9 @@ class LibraryItemTile extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               if (isPlaying)
-                Text(
-                  "Playing",
-                  style: TextStyle(color: Colors.amber),
-                ),
+                Text("Playing", style: TextStyle(color: Colors.amber)),
               if (isPlaying) SizedBox(width: 8),
-              Text(
-                '${data.song.likes}',
-                style: TextStyle(fontSize: 14),
-              ),
+              Text('${data.song.likes}', style: TextStyle(fontSize: 14)),
               IconButton(
                 icon: Icon(Icons.favorite_border),
                 color: Colors.red,
