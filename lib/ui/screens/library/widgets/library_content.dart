@@ -35,6 +35,15 @@ class LibraryContent extends StatelessWidget {
             onTap: () {
               mv.start(data[index].song);
             },
+            onLike: () async {
+              try {
+                await mv.likeSong(data[index].song);
+              } catch (e) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(content: Text('Failed to like song: $e')),
+                );
+              }
+            },
           ),
         );
     }
