@@ -31,23 +31,32 @@ class LibraryContent extends StatelessWidget {
 
       case AsyncValueState.success:
         List<LibraryItemData> data = asyncValue.data!;
-        content = ListView.builder(
-          itemCount: data.length,
-          itemBuilder: (context, index) => LibraryItemTile(
-            data: data[index],
-            isPlaying: mv.isSongPlaying(data[index].song),
-            onTap: () {
-              mv.start(data[index].song);
-            },
-            onLike: () async {
-              try {
-                await mv.likeSong(data[index].song);
-              } catch (e) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text('Failed to like song: $e')),
-                );
-              }
-            },
+        content = RefreshIndicator(
+          onRefresh: () async {
+            mv.fetchSong(forceFetch: true);
+            await Future.delayed(Duration(milliseconds: 100));
+            while (mv.data.state == AsyncValueState.loading) {
+              await Future.delayed(Duration(milliseconds: 50));
+            }
+          },
+          child: ListView.builder(
+            itemCount: data.length,
+            itemBuilder: (context, index) => LibraryItemTile(
+              data: data[index],
+              isPlaying: mv.isSongPlaying(data[index].song),
+              onTap: () {
+                mv.start(data[index].song);
+              },
+              onLike: () async {
+                try {
+                  await mv.likeSong(data[index].song);
+                } catch (e) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text('Failed to like song: $e')),
+                  );
+                }
+              },
+            ),
           ),
         );
     }
