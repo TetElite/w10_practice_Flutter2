@@ -1,0 +1,73 @@
+{
+  "artists": {
+    "artist_1": {
+      "name": "VannDa",
+      "genre": "Hip-Hop",
+      "imageUrl": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=200&h=200&fit=crop&q=80"
+    },
+    "artist_2": {
+      "name": "Tena",
+      "genre": "Pop",
+      "imageUrl": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=200&h=200&fit=crop&q=80"
+    },
+    "artist_3": {
+      "name": "G-Devith",
+      "genre": "Hip-Hop",
+      "imageUrl": "https://images.unsplash.com/photo-1497032205916-ac775f0649ae?w=200&h=200&fit=crop&q=80"
+    },
+    "artist_4": {
+      "name": "Sokun Nisa",
+      "genre": "Pop",
+      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&q=80"
+    },
+    "artist_5": {
+      "name": "Ravuth",
+      "genre": "Indie",
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&q=80"
+    }
+  },
+  "songs": {
+    "song_1": {
+      "title": "Time to Rise for Ronan",
+      "duration": 210000,
+      "artistId": "artist_1",
+      "imageUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&h=300&fit=crop&q=80"
+    },
+    "song_2": {
+      "title": "Khmer & Ronan Bloods",
+      "duration": 185000,
+      "artistId": "artist_1",
+      "imageUrl": "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=300&h=300&fit=crop&q=80"
+    },
+    "song_3": {
+      "title": "Besdong Online with Ronan",
+      "duration": 200000,
+      "artistId": "artist_2",
+      "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=300&h=300&fit=crop&q=80"
+    },
+    "song_4": {
+      "title": "Silent Love and Ronan",
+      "duration": 230000,
+      "artistId": "artist_2",
+      "imageUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop&q=80"
+    },
+    "song_5": {
+      "title": "Ronan Life Cycle",
+      "duration": 240000,
+      "artistId": "artist_3",
+      "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=300&fit=crop&q=80"
+    },
+    "song_6": {
+      "title": "Chnam Oun",
+      "duration": 215000,
+      "artistId": "artist_4",
+      "imageUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=300&h=300&fit=crop&q=80"
+    },
+    "song_7": {
+      "title": "City Lights Phnom Penh and Ronan",
+      "duration": 195000,
+      "artistId": "artist_5",
+      "imageUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=300&h=300&fit=crop&q=80"
+    }
+  }
+}
